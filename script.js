@@ -14,7 +14,6 @@ const again = document.querySelector('.again');
 let currScore = 20;
 let currHighScore = 0;
 let RANDOMNUMBER = randomNumGenerator();
-console.log(RANDOMNUMBER);
 
 //random number genrator function
 function randomNumGenerator() {
@@ -68,7 +67,6 @@ function valueChecker(userVal, RANDOMNUMBER) {
   if (currScore === 0) {
     // check.
     check.setAttribute('disabled', 'true');
-    console.log('came here');
     lostGame(RANDOMNUMBER);
     return "You've Lost";
   }
@@ -78,7 +76,6 @@ function valueChecker(userVal, RANDOMNUMBER) {
 //listener for check button
 check.addEventListener('click', function () {
   const userVal = Number(guess.value);
-  console.log(userVal, RANDOMNUMBER);
 
   if (!userVal) return;
 
